@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# profile: http://ogp.me/ns/profile#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="David Steinsland" />
+    <meta property="og:type" content="profile" />
+    <meta property="profile:first_name" content="David" />
+    <meta property="profile:last_name" content="Steinsland" />
+    <link rel="shortcut icon" href="{{ site.url }}/favicon.ico" />
+
+    <title>
+    {% if page.full_title %}
+        {{ page.full_title }}
+    {% elseif page.title %}
+        {% if site.title %}
+            {{ page.title }} &mdash; {{ site.title }}
+        {% elseif page.subtitle %}
+            {{ page.title }} &mdash; {{ site.title }} &mdash; {{ site.subtitle }}
+        {% endif %}
+    {% elseif site.title %}
+        {% if site.subtitle %}
+            {{ site.title }} &mdash; {{ site.subtitle }}
+        {% else %}
+            {{ site.title }}
+        {% endif %}
+    {% endif %}
+    </title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ site.url }}/assets/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <style>
+    @import url(http://fonts.googleapis.com/css?family=Ruda:400,900,700);
+
+    body {
+        background-color:#fff;
+
+        font-family: 'Ruda', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    /* Titles */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Ruda', sans-serif;
+        font-weight: 900;
+        color: #333;
+    }
+
+    /* margin top & Bottom */
+    .mt {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    /* Button Call To Action */
+    .btn-cta {
+      color: #ffffff;
+      background-color: transparent;
+      border-color: #ffffff;
+      font-family: 'Ruda', sans-serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
+
+    .btn-cta:hover,
+    .btn-cta:focus,
+    .btn-cta:active,
+    .btn-cta.active,
+    .open .dropdown-toggle.btn-cta {
+      color: #2f2f2f;
+      background-color: #ffffff;
+      border-color: #2f2f2f;
+    }
+
+    #headerwrap {
+        background-color: #000;
+        min-height: 450px;
+        padding-top: 20px;
+    }
+
+    #headerwrap h2,
+    #headerwrap h3 {
+        color:#555;
+    }
+
+    div.header-bg {
+        background: #000 url({{ site.url }}/assets/me.png) no-repeat center top;
+        margin-top: 0px;
+        background-attachment: relative;
+        background-position: right top;
+    }
+
+    #headerwrap h1 {
+        margin-top: 0px;
+        color: white;
+        font-size: 50px;
+        font-weight: 900;
+        letter-spacing: 1px;
+    }
+
+    .bubble {
+        position: relative;
+        max-width:500px;
+        min-width: 245px;
+        padding: 20px;
+        background: #111;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    .bubble:after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 15px 0 15px 15px;
+        border-color: transparent #111;
+        display: block;
+        width: 0;
+        z-index: 1;
+        right: -15px;
+        top: 72px;
+    }
+
+    div#content {
+
+    }
+
+    </style>
+</head>
+<body>
+    <div id="headerwrap">
+        <div class="container header-bg">
+            <div class="row centered">
+                <div class="col-lg-8 col-lg-offset-2 mt">
+                    <div class="bubble">
+                        <h1>My name is David.</h1>
+                        <h2>I <em>do</em> programming.</h2>
+                        <h3>Cryptography is really cool.</h3>
+                    </div>
+                    <p class="mt">
+                        <a href="https://github.com/davidsteinsland" class="btn btn-cta btn-lg">
+                            <i class="fa fa-github"></i> GITHUB
+                        </a>
+
+                        <a href="http://no.linkedin.com/in/davidsteinsland" class="btn btn-cta btn-lg">
+                            <i class="fa fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="{{ site.url }}/assets/cv.pdf" class="btn btn-cta btn-lg">
+                            <i class="fa fa-file-pdf-o"></i> CV
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

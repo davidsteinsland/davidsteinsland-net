@@ -1,0 +1,21 @@
+{
+  "name": "davidsteinsland_net",
+  "description": "Personal home page",
+  "version": "0.1",
+  "homepage": "http://davidsteinsland.net",
+  "license": "proprietary",
+  "authors": [
+    "David Steinsland"
+  ],
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "jquery": "~2.1.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ]
+}
